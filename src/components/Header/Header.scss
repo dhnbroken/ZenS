@@ -1,0 +1,134 @@
+.header {
+    padding: 5px 0;
+    background-color: #f6f6f6;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+
+    .header__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-right {
+            display: flex;
+            gap: 8px;
+    
+            .text-right {
+                text-align: right;
+                margin-top: 10px;
+    
+                .title {
+                    font-weight: 600;
+                    opacity: 0.3;
+                }
+            }
+    
+            .avatar {
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.content {
+    width: 100%;
+    background-color: #29b363;
+    color: white;
+    text-align: center;
+    padding: 42px;
+    margin: 0 auto;
+}
+
+.joke {
+    margin: 3% auto;
+    text-align: left;
+    margin-bottom: 3%;
+
+    .joke__story {
+        margin-bottom: 20px ;
+        min-height: 110px;
+    }
+    .end-joke {
+        text-align: center;
+    }
+    
+    .joke-button {
+        margin-top: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .like, .dislike {
+            width: 300px;
+            color: white;
+            cursor: pointer;
+            padding: 24px;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+        
+        .like {
+            background-color: #2c7edb;
+            box-shadow: 0px 4px 3px 0px rgba(32,82,135,1);
+        }
+        .dislike {
+            background-color: #29b363;
+            box-shadow: 0px 4px 3px 0px rgba(24,87,50,1);
+        }
+    }
+}
+
+/* Tablet & mobile*/
+@media (max-width: 63.9375em) {
+    .joke {
+        .joke__story {
+            min-height: 130px;
+        }
+        .joke-button {
+            margin-top: 3%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+    }
+    
+}
+/* Mobile*/
+@media (max-width: 46.1875em) {
+    .logo {
+        width: 129px !important;
+        height: 45px !important;
+    }
+    .text-right {
+        font-size: 12px;
+        margin-top: 5px !important;
+    }
+    .avatar {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .joke {
+        font-size: 14px;
+        .joke__story {
+            min-height: 150px;
+        }
+
+        .joke-button {
+            .like, .dislike {
+                width: 200px;
+                font-size: 14px;
+            }
+        }
+    }
+    .footer {
+        font-size: 14px;
+    }
+}
